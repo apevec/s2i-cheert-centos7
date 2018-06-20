@@ -6,9 +6,9 @@ if [[ "$1" == "-h" ]]; then
 	exec /usr/libexec/s2i/usage
 fi
 
-echo "Deploying Pile2"
-mkdir -p $PILE2
-mv -v -T /tmp/src $PILE2
+echo "Deploying Cheert"
+mkdir -p $CHEERT
+mv -v -T /tmp/src $CHEERT
 pushd $GOPATH
 go get -v ./...
 popd
@@ -17,7 +17,7 @@ echo "Deploying Jay tool"
 go get -v github.com/blue-jay/jay
 
 echo "Building"
-pushd $PILE2
+pushd $CHEERT
 npm install
 npm run init
 go build -v -o $APP_NAME

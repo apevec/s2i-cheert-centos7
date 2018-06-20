@@ -1,4 +1,4 @@
-IMAGE_NAME = s2i-pile2-centos7
+IMAGE_NAME = s2i-cheert-centos7
 
 .PHONY: build
 build:

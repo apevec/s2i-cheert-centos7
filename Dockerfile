@@ -2,15 +2,15 @@ FROM openshift/base-centos7
 LABEL maintainer="Anton Arapov <aarapov@redhat.com>"
 
 ENV GOPATH=$HOME/go \
-    PILE2=$HOME/go/src/github.com/arapov/pile2 \
-    APP_NAME=pile2 \
+    CHEERT=$HOME/go/src/github.com/arapov/cheert \
+    APP_NAME=cheert \
     PATH=$PATH:$HOME/go/bin
 
-ENV JAYCONFIG=$PILE2/env.json
+ENV JAYCONFIG=$CHEERT/env.json
 
 # Set the labels that are used for OpenShift to describe the builder image.
-LABEL io.k8s.description="S2I builder image for Pile2" \
-    io.k8s.display-name="s2i-pile2-centos7" \
+LABEL io.k8s.description="S2I builder image for Cheert" \
+    io.k8s.display-name="s2i-cheert-centos7" \
     io.openshift.expose-services="8080:http" \
     io.openshift.tags="builder,golang" \
     # this label tells s2i where to find its mandatory scripts
