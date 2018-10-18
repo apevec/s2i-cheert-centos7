@@ -14,7 +14,7 @@ go get -v ./...
 popd
 
 echo "Deploying Jay tool"
-go get -v github.com/arapov/jay
+go get -v github.com/blue-jay-fork/jay
 
 echo "Building"
 pushd $CHEERT
