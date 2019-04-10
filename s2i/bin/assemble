@@ -10,6 +10,9 @@ echo "Deploying Cheert"
 mkdir -p $CHEERT
 mv -v -T /tmp/src $CHEERT
 pushd $GOPATH
+go get -v github.com/lib/pq
+go get -v golang.org/x/sys/cpu
+go get -v golang.org/x/sys/unix
 go get -v ./...
 popd
 

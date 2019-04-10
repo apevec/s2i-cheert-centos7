@@ -4,6 +4,7 @@ LABEL maintainer="Anton Arapov <aarapov@redhat.com>"
 ENV GOPATH=$HOME/go \
     CHEERT=$HOME/go/src/github.com/arapov/cheert \
     APP_NAME=cheert \
+    GO111MODULE=off \
     PATH=$PATH:$HOME/go/bin
 
 ENV JAYCONFIG=$CHEERT/env.json
